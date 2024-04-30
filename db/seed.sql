@@ -1,0 +1,190 @@
+\c BALLOT_CASTING_SYS
+
+INSERT INTO MEMBERS (
+    FIRST_NAME,
+    LAST_NAME,
+    DOB,
+    EMAIL,
+    PASSWORD,
+    PHONE_NUMBER,
+    USER_ID
+) VALUES (
+    'John',
+    'Doe1',
+    '1980-01-01',
+    'member1@example.com',
+    'password1',
+    '1234567890',
+    'user1'
+),
+(
+    'Jane',
+    'Doe2',
+    '1981-02-02',
+    'member2@example.com',
+    'password2',
+    '1234567891',
+    'user2'
+),
+(
+    'Jim',
+    'Doe3',
+    '1982-03-03',
+    'member3@example.com',
+    'password3',
+    '1234567892',
+    'user3'
+),
+(
+    'Jill',
+    'Doe4',
+    '1983-04-04',
+    'member4@example.com',
+    'password4',
+    '1234567893',
+    'user4'
+),
+(
+    'Jack',
+    'Doe5',
+    '1984-05-05',
+    'member5@example.com',
+    'password5',
+    '1234567894',
+    'user5'
+),
+(
+    'Jerry',
+    'Doe6',
+    '1985-06-06',
+    'member6@example.com',
+    'password6',
+    '1234567895',
+    'user6'
+),
+(
+    'Jenny',
+    'Doe7',
+    '1986-07-07',
+    'member7@example.com',
+    'password7',
+    '1234567896',
+    'user7'
+),
+(
+    'Jessica',
+    'Doe8',
+    '1987-08-08',
+    'member8@example.com',
+    'password8',
+    '1234567897',
+    'user8'
+),
+(
+    'Jeff',
+    'Doe9',
+    '1988-09-09',
+    'member9@example.com',
+    'password9',
+    '1234567898',
+    'user9'
+),
+(
+    'Julia',
+    'Doe10',
+    '1989-10-10',
+    'member10@example.com',
+    'password10',
+    '1234567899',
+    'user10'
+),
+(
+    'Jacob',
+    'Doe11',
+    '1990-11-11',
+    'member11@example.com',
+    'password11',
+    '1234567800',
+    'user11'
+),
+(
+    'Jasmine',
+    'Doe12',
+    '1991-12-12',
+    'member12@example.com',
+    'password12',
+    '1234567801',
+    'user12'
+),
+(
+    'James',
+    'Doe13',
+    '1992-01-13',
+    'member13@example.com',
+    'password13',
+    '1234567802',
+    'user13'
+),
+(
+    'Jade',
+    'Doe14',
+    '1993-02-14',
+    'member14@example.com',
+    'password14',
+    '1234567803',
+    'user14'
+),
+(
+    'Jared',
+    'Doe15',
+    '1994-03-15',
+    'member15@example.com',
+    'password15',
+    '1234567804',
+    'user15'
+),
+(
+    'Jocelyn',
+    'Doe16',
+    '1995-04-16',
+    'member16@example.com',
+    'password16',
+    '1234567805',
+    'user16'
+),
+(
+    'Joel',
+    'Doe17',
+    '1996-05-17',
+    'member17@example.com',
+    'password17',
+    '1234567806',
+    'user17'
+),
+(
+    'Jesse',
+    'Doe18',
+    '1997-06-18',
+    'member18@example.com',
+    'password18',
+    '1234567807',
+    'user18'
+),
+(
+    'Joy',
+    'Doe19',
+    '1998-07-19',
+    'member19@example.com',
+    'password19',
+    '1234567808',
+    'user19'
+),
+(
+    'Jenna',
+    'Doe20',
+    '1999-08-20',
+    'member20@example.com',
+    'password20',
+    '1234567809',
+    'user20'
+);
