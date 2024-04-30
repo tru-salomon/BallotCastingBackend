@@ -18,6 +18,10 @@ app.get('/', (req, res) => {
 const poolsController = require('./controllers/poolsController');
 app.use('/pools', poolsController);
 
+// Ballots Route
+const ballotsController = require('./controllers/ballotsController');
+app.use('/ballots', ballotsController);
+
 // Error Handling
 app.get('*', (req, res) => {
     res.status(404).send('Page not found');
