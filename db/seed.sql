@@ -1,4 +1,4 @@
-\C BALLOT_CASTING_SYS;
+\c ballot_casting_sys;
 
 INSERT INTO MEMBERS (
     FIRST_NAME,
