@@ -1,6 +1,6 @@
 const express = require('express');
 const ballots = express.Router();
-const { getAllBallots, getBallot } = require('../queries/ballot');
+const { getAllBallots, getBallot, createBallot } = require('../queries/ballot');
 
 ballots.get('/', async (req, res) => {
     const allBallots = await getAllBallots();
@@ -23,6 +23,14 @@ ballots.get('/:id', async (req, res) => {
     }
 });
 
+ballots.post('/', async (req, res) => {
+    try {
+        const newBallot = await createBallot(req.body);
+        res.status(200).json(newBallot);
+    } catch (error) {
+        res.status(404).send({ error: 'Ballot not created' });
+    }
+})
 
 module.exports = ballots;
 

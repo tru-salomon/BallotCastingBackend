@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
     res.send('Ballot Casting API is running!');
 });
 
-// Pools Route
+// Members Route
 const membersController = require('./controllers/membersController');
 app.use('/members', membersController);
 

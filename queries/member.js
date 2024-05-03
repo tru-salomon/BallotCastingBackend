@@ -17,5 +17,16 @@ const getMember = async (id) => {
         return error;
     }
 };
+const createMember = async (member) => {
+    try {
+        const newMember = await db.one(
+            'INSERT INTO members (first_name, last_name, dob, user_id, email, password, phone_number) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *',
+            [member.first_name, member.last_name, member.dob, member.user_id, member.email, member.password]
+        );
+        return newMember;
+    } catch (error) {
+        return error;
+    }
+}
 
-module.exports = { getAllMembers, getMember };
+module.exports = { getAllMembers, getMember, createMember};
