@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 });
 
 // Pools Route
-const poolsController = require('./controllers/poolsController');
-app.use('/pools', poolsController);
+const membersController = require('./controllers/membersController');
+app.use('/members', membersController);
 
 // Ballots Route
 const ballotsController = require('./controllers/ballotsController');

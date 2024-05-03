@@ -9,4 +9,14 @@ const getAllBallots = async () => {
     }
 };
 
-module.exports = { getAllBallots };
+const getBallot = async (id) => {
+    try {
+        const ballot = await db.one('SELECT * FROM ballots WHERE id = $1', id);
+        return ballot;
+    } catch (error) {
+        return error;
+    }
+}
+
+
+module.exports = { getAllBallots, getBallot };
