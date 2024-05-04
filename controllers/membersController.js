@@ -1,6 +1,7 @@
 const express = require('express');
 const members = express.Router();
 const { getAllMembers, getMember, createMember } = require('../queries/member');
+const { checkName, checkDob, checkEmail, checkPassword, checkPhoneNumber } = require('../validations/checkmembers');
 
 members.get('/', async (req, res) => {
     const allMembers = await getAllMembers();
@@ -23,7 +24,7 @@ members.get('/:id', async (req, res) => {
     }
 });
 
-members.post('/', async (req, res) => {
+members.post('/', checkName, checkDob, checkEmail, checkPassword, checkPhoneNumber, async (req, res) => {
     try {
         const newMember = await createMember(req.body);
         res.status(200).json(newMember);
