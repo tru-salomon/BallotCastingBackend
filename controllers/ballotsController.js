@@ -24,7 +24,7 @@ ballots.get('/:id', async (req, res) => {
     }
 });
 
-ballots.post('/', checkBallot, checkVotes,  async (req, res) => {
+ballots.post('/', checkBallot, checkVotes, async (req, res) => {
     try {
         const newBallot = await createBallot(req.body);
         res.status(200).json(newBallot);
@@ -32,6 +32,5 @@ ballots.post('/', checkBallot, checkVotes,  async (req, res) => {
         res.status(404).send({ error: 'Ballot not created' });
     }
 })
-
 module.exports = ballots;
 

@@ -29,6 +29,4 @@ const createBallot = async (ballot) => {
         return error;
     }
 }
-
-
 module.exports = { getAllBallots, getBallot, createBallot};

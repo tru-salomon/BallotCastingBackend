@@ -1,6 +1,6 @@
 const express = require('express');
 const members = express.Router();
-const { getAllMembers, getMember, createMember } = require('../queries/member');
+const { getAllMembers, getMember, createMember, deleteMember, updateMember } = require('../queries/member');
 const { checkName, checkDob, checkEmail, checkPassword, checkPhoneNumber } = require('../validations/checkmembers');
 
 members.get('/', async (req, res) => {
@@ -31,6 +31,22 @@ members.post('/', checkName, checkDob, checkEmail, checkPassword, checkPhoneNumb
     } catch (error) {
         res.status(404).send({ error: 'Member not created' });
     }
+});
+
+members.delete("/:id", async (req, res) => {
+    const { id } = req.params;
+    const deletedMember = await deleteMember(id);
+    if (deleteMember.id) {
+        res.status(200).json(deletedMember);
+    } else {
+        res.status(404).json("Member not found");
+    }
+})
+
+members.put("/:id", async (req, res) => {
+    const { id } = req.params;
+    const updatedMember = await updateMember(id, req.body);
+    res.status(200).json(updatedMember);
 });
 
 module.exports = members;
