@@ -32,5 +32,5 @@ ballots.post('/', checkBallot, checkVotes, async (req, res) => {
         res.status(404).send({ error: 'Ballot not created' });
     }
 })
-module.exports = ballots;
+module.exports = ballots; 
 
