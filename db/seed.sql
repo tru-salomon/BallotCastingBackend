@@ -1,4 +1,4 @@
-\c ballot_casting_sys;
+\C BALLOT_CASTING_SYS;
 
 INSERT INTO MEMBERS (
     FIRST_NAME,
@@ -187,4 +187,21 @@ INSERT INTO MEMBERS (
     'password20',
     '1234567809',
     'user20'
+);
+
+INSERT INTO USERS (
+    FIRST_NAME,
+    LAST_NAME,
+    DOB,
+    EMAIL,
+    PASSWORD,
+    PHONE_NUMBER
+) VALUES (
+    'John',
+    'Doe1',
+    'member1@example.com',
+    '1980-01-01',
+    'password1',
+    '1234567890',
+    'user1'
 );
