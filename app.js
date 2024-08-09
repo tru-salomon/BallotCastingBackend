@@ -1,6 +1,7 @@
 // Dependencies: express
 const cors = require('cors');
 const express = require('express');
+const usersController = require('./controllers/usersController');
 
 // Configuration
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use('/users', usersController);
 
 // Routes
 app.get('/', (req, res) => {

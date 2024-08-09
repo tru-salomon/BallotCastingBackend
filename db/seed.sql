@@ -199,9 +199,8 @@ INSERT INTO USERS (
 ) VALUES (
     'John',
     'Doe1',
-    'member1@example.com',
     '1980-01-01',
+    'member1@example.com',
     'password1',
-    '1234567890',
-    'user1'
+    '1234567890'
 );

@@ -1,7 +1,7 @@
 const express = require('express');
 const members = express.Router();
 const { getAllMembers, getMember, createMember, deleteMember, updateMember } = require('../queries/member');
-const { checkName, checkDob, checkEmail, checkPassword, checkPhoneNumber } = require('../validations/checkmembers');
+const { checkName, checkDob, checkEmail, checkPassword, checkPhoneNumber } = require('../validations/checkMembers');
 
 members.get('/', async (req, res) => {
     const allMembers = await getAllMembers();
